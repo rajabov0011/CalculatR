@@ -1,4 +1,5 @@
-﻿string firstinput = Console.ReadLine();
+﻿// This project adds 2 numbers
+string firstinput = Console.ReadLine();
 string secondinput = Console.ReadLine();
 
 int firstnumber = Convert.ToInt32(firstinput);
