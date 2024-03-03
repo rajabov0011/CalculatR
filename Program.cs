@@ -1,8 +1,49 @@
-﻿// This project adds 2 numbers
-string firstinput = Console.ReadLine();
-string secondinput = Console.ReadLine();
+﻿using System;
 
-int firstnumber = Convert.ToInt32(firstinput);
-int secondnumber = Convert.ToInt32(secondinput);
+class Calculator
+{
+    static void Main()
+    {
+        double num1, num2, result = 0;
+        char operation;
 
-Console.WriteLine(firstnumber + secondnumber);
+        Console.WriteLine("Welcome to Calculator!");
+        Console.WriteLine("Enter the number: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Enter the action (+, -, *, /): ");
+        operation = Convert.ToChar(Console.ReadLine());
+
+        Console.WriteLine("Enter the next number: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+
+        switch (operation)
+        {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    Console.WriteLine("Xatolik: Nolga bo'lish mumkin emas!");
+                    return;
+                }
+                break;
+            default:
+                Console.WriteLine("An incorrect action was entered!");
+                return;
+        }
+
+        Console.WriteLine($"Natija: {result}");
+    }
+}
