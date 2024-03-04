@@ -35,7 +35,7 @@ class Calculator
                 }
                 else
                 {
-                    Console.WriteLine("Xatolik: Nolga bo'lish mumkin emas!");
+                    Console.WriteLine("Error: Cannot divide by zero!");
                     return;
                 }
                 break;
@@ -44,6 +44,6 @@ class Calculator
                 return;
         }
 
-        Console.WriteLine($"Natija: {result}");
+        Console.WriteLine($"Result: {result}");
     }
 }
